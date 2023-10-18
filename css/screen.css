@@ -2,19 +2,30 @@
 #FONTS
 \*------------------------------------*/
 
+@font-face {
+font-family: "Work Sans";
+font-weight: 400;
+src: url("../fonts/Work_Sans/WorkSans-Italic-VariableFont_wght.ttf") format("ttf")
+}
+
+@font-face {
+font-family: "Work Sans";
+font-weight: 600;
+src: url("../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf") format("ttf")
+}
+
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
 
 :root {
-    /* colors */
-    --color-front: #CCE7FF;
-    --color-back: #0F3557;
-    /* opacity */
-    --muted-opacity: .6;
-    /* transitions */
-    --transition-duration: 1.5s;
-    -transition-easing: cubic-bezier(0.250,0.460,0.450,0.940);
+/* colors */
+--color-front: #0F3557;
+--color-back: #CCE7FF;
+
+/* opacity */
+
+/* transitions */
 }
 
 /*------------------------------------*\
@@ -22,27 +33,27 @@
 \*------------------------------------*/
 
 /*
-    Generic: Page
-    ---
-    Global page styles + universal box-sizing:
+Generic: Page
+---
+Global page styles + universal box-sizing:
 */
 
 html {
-    font-size: 100%;
-    line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+font-size: 16px;
+line-height: 1.5;
+font-family: "Work Sans", Helvetica, arial, sans-serif;
+box-sizing: border-box;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: "zero" 1;
+background-color: var(--color-back);
+color: var(--color-front);
 }
-body{
-    font-family: 'Work Sans', sans-serif;
-    background-color: var(--color-front);
-}
+
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+box-sizing: inherit;
 }
 
 /*
@@ -53,15 +64,15 @@ body{
 */
 
 ::-moz-selection {
-    background: red;
-    color: white;
-    text-shadow: none;
+background: red;
+color: white;
+text-shadow: none;
 }
 
 ::selection {
-    background: red;
-    color: white;
-    text-shadow: none;
+background: red;
+color: white;
+text-shadow: none;
 }
 
 /*------------------------------------*\
@@ -75,47 +86,47 @@ Default markup for images to make them responsive
 */
 
 img {
-    max-width: 100%;
-    vertical-align: top;
+max-width: 100%;
+vertical-align: top;
 }
 
 /*
-    Elements: typography
-    ---
-    Default markup for typographic elements
+Elements: typography
+---
+Default markup for typographic elements
 */
 
 h1,
 h2,
 h3 {
-    font-weight: 700;
+font-weight: 700;
 }
 
 h1 {
-    font-size: 2.25rem;
-    line-height: 1.3333;
-    margin: 0 0 1.5rem;
+font-size: 36px;
+line-height: 48px;
+margin: 0 0 24px;
 }
 
 h2 {
-    font-size: 2rem;
-    line-height: 1.25;
-    margin: 0 0 1.5rem;
+font-size: 32px;
+line-height: 40px;
+margin: 0 0 24px;
 }
 
 h3 {
-    font-size: 1.5rem;
-    line-height: 1.3333;
-    margin: 0 0 1.5rem;
+font-size: 26px;
+line-height: 32px;
+margin: 0 0 24px;
 }
 
 h4,
 h5,
 h6 {
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.5;
-    margin: 0 0 1.5rem;
+font-size: 16px;
+font-weight: 600;
+line-height: 24px;
+margin: 0 0 24px;
 }
 
 p,
@@ -125,66 +136,73 @@ dl,
 table,
 address,
 figure {
-    margin: 0 0 1.5rem;
+margin: 0 0 24px;
 }
 
 ul,
 ol {
-    padding-left: 1.5rem;
+padding-left: 24px;
 }
 
 li ul,
 li ol {
-    margin-bottom: 0;
+margin-bottom: 0;
 }
 
 blockquote {
-    font-style: normal;
-    font-size: 1.5rem;
-    line-height: 1.3333;
-    margin: 0 0 1.5rem;
+font-style: normal;
+font-size: 23px;
+line-height: 32px;
+margin: 0 0 24px;
 }
 
 blockquote * {
-    font-size: inherit;
-    line-height: inherit;
+font-size: inherit;
+line-height: inherit;
+}
+
+figcaption {
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+margin-top: 8px;
 }
 
 hr {
-    border: 0;
-    height: 1px;
-    background: LightGrey;
-    margin: 0 0 1.5rem;
+border: 0;
+height: 1px;
+background: LightGrey;
+margin: 0 0 24px;
 }
 
 a {
-    color: red;
-    outline-color: red;
-    outline-width: medium;
-    outline-offset: 2px;
+color: red;
+outline-color: red;
+outline-width: medium;
+outline-offset: 2px;
 }
 
 a:visited,
 a:active {
-    color: red;
+color: red;
 }
 
 a:hover,
 a:focus {
-    color: red;
+color: red;
 }
 
 label,
 input {
-    display: block;
+display: block;
 }
 
 select {
-    width: 100%;
+width: 100%;
 }
 
 input::placeholder {
-    color: gray;
+color: gray;
 }
 
 /*------------------------------------*\
@@ -192,93 +210,81 @@ input::placeholder {
 \*------------------------------------*/
 
 /*
-    Object: Button reset
-    ---
-    Small button reset object
+Object: Button reset
+---
+Small button reset object
 */
 
 .o-button-reset {
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: auto;
-    overflow: visible;
-    background: transparent;
+border: none;
+margin: 0;
+padding: 0;
+width: auto;
+overflow: visible;
+background: transparent;
 
-    /* inherit font & color from ancestor */
-    color: inherit;
-    font: inherit;
+/* inherit font & color from ancestor */
+color: inherit;
+font: inherit;
 
-    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-    line-height: normal;
+/* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+line-height: normal;
 
-    /* Corrects font smoothing for webkit */
-    -webkit-font-smoothing: inherit;
-    -moz-osx-font-smoothing: inherit;
+/* Corrects font smoothing for webkit */
+-webkit-font-smoothing: inherit;
+-moz-osx-font-smoothing: inherit;
 
-    /* Corrects inability to style clickable `input` types in iOS */
-    -webkit-appearance: none;
+/* Corrects inability to style clickable `input` types in iOS */
+-webkit-appearance: none;
 }
 
 /*
-    Object: Hide accessible
-    ---
-    Accessibly hide any element
+Object: Hide accessible
+---
+Accessibly hide any element
 */
 
 .o-hide-accessible {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+border: 0;
 }
 
 /*------------------------------------*\
 #COMPONENTS
 \*------------------------------------*/
-.c-app{
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
-    width: 25rem;
-}
-.c-app__summary{
-    font-size: 28px;
-    color: var(--color-back);
-}
-.c-app__location{
-    color: var(--color-back);
-}
+
 /*
-    Component: Logo
-    ---
-    Website main logo
+Component: Logo
+---
+Website main logo
 */
 
 .c-logo {
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: 1rem;
-    display: flex;
-    align-items:center;
-    gap: 8px;
+font-size: 16px;
+font-weight: 600;
+line-height: 16px;
+display: flex;
+align-items: center;
+gap: 8px;
+margin-bottom: auto;
 }
 
 /*
-    Component: Sun
-    ---
-    The sun
+Component: Sun
+---
+The sun
 */
 
 .c-sun {
-    height: 22px;
-    width: 22px;
-    fill: var(--color-back);
+width: 22px;
+height: 22px;
+fill: var(--color-front);
 }
 
 .c-logo .c-sun {
@@ -286,157 +292,173 @@ input::placeholder {
 }
 
 /*
-    Component: App
-    ---
-    Main app wrapper
+Component: App
+---
+Main app wrapper
 */
 
+.c-app{
+max-width: 400px;
+min-height: 100vh;
+padding: 32px;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+.c-app__summary{
+font-size: 28px;
+line-height: 40px;
+}
+
 /*
-    Component: Horizon
-    ---
-    Horizon with sun visualisation
+Component: Horizon
+---
+Horizon with sun visualisation
 */
-.c-horizon{
-    width: 25rem;
-    margin-top: auto;
+
+.c-horizon__line {
+border-top: 1px solid var(--color-front);
+padding-top: 8px;
+margin-bottom: 34px;
+display: flex;
+justify-content: space-between;
 }
-.c-horizon__line{
-    border-top: 1px solid var(--color-back);
-    display: flex;
-    flex: space-between;
-    gap: 21.2rem;
-}
+
 .c-horizon__time{
-    font-size: 12px;
+font-size: 12px;
+line-height: 14px;
 }
+
 .c-horizon__sky-wrapper {
-    position: relative;
-    height: 12.5rem;
-    overflow: hidden;
+position: relative;
+height: 200px;
+overflow: hidden;
+padding: 22px 40px 0px 0px;
 }
 
 .c-horizon__sky {
-    position: relative;
-    height: 12.5rem;
+position: relative;
+height: 100%;
 }
-.c-horizon__sun {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-}
+
 .c-horizon__sun::before{
-    font-size: 12px;
-    content: attr(data-time);
-    display: block;
-    margin-bottom: 8px;
-    text-align: center;
+content: attr(data-time);
+font-size: 12px;
+line-height: 14px;
+display: block;
+margin-bottom: 8px;
+text-align: center;
 }
-.c-horizon__sky-wrapper{
-    padding-top: 22px;
-    padding-right: 40px;
+
+.c-horizon__sun {
+position: absolute;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 40px;
+transform: translateY(22px);
 }
+
 /*------------------------------------*\
 #UTILITIES
 \*------------------------------------*/
 
 /*
-    Utilities: Mute
-    Mute with opacity
+Utilities: Mute
+Mute with opacity
 */
+
 .u-muted{
-    opacity: var(--muted-opacity);
+opacity: 60%;
 }
+
 /*------------------------------------*\
 #STATES
 \*------------------------------------*/
 
 /*
-    Change the theme using CSS vars.
+Change the theme using CSS vars.
 */
 
 /* Night version: just switch the light and dark vars */
+
+.is-night {
+--color-front: #CCE7FF;
+--color-back: #0F3557;
+}
 
 /*------------------------------------*\
 #MEDIA
 \*------------------------------------*/
 
 /*
-    Print styles.
-    ---
-    Inlined to avoid the additional HTTP request:
-    http://www.phpied.com/delay-loading-your-print-css/
+Print styles.
+---
+Inlined to avoid the additional HTTP request:
+http://www.phpied.com/delay-loading-your-print-css/
 */
 
 @media print {
-
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        /* Black prints faster:
-        http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-    * Don't show links that are fragment identifiers,
-    * or use the `javascript:` pseudo protocol
-    */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre {
-        white-space: pre-wrap !important;
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-    * Printing Tables:
-    * http://css-discuss.incutio.com/wiki/Printing_Tables
-    */
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+*,
+*:before,
+*:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+    http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+a,
+a:visited {
+    text-decoration: underline;
+}
+a[href]:after {
+    content: " (" attr(href) ")";
+}
+abbr[title]:after {
+    content: " (" attr(title) ")";
+}
+/*
+* Don't show links that are fragment identifiers,
+* or use the `javascript:` pseudo protocol
+*/
+a[href^="#"]:after,
+a[href^="javascript:"]:after {
+    content: "";
+}
+pre {
+    white-space: pre-wrap !important;
+}
+pre,
+blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+}
+/*
+* Printing Tables:
+* http://css-discuss.incutio.com/wiki/Printing_Tables
+*/
+thead {
+    display: table-header-group;
+}
+tr,
+img {
+    page-break-inside: avoid;
+}
+p,
+h2,
+h3 {
+    orphans: 3;
+    widows: 3;
+}
+h2,
+h3 {
+    page-break-after: avoid;
+}
 }
